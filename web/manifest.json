@@ -1,0 +1,35 @@
+{
+    "name": "zero",
+    "short_name": "zero",
+    "start_url": ".",
+    "display": "standalone",
+    "background_color": "#0175C2",
+    "theme_color": "#0175C2",
+    "description": "aqma",
+    "orientation": "portrait-primary",
+    "prefer_related_applications": false,
+    "icons": [
+        {
+            "src": "asset/logo/zero.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "asset/logo/zero.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        },
+        {
+            "src": "asset/logo/zero.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "maskable"
+        },
+        {
+            "src": "asset/logo/zero.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable"
+        }
+    ]
+}

@@ -1,0 +1,83 @@
+name: zerov7
+description: "aqma"
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.5.4 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  firebase_core: ^3.8.1
+  firebase_auth: ^5.3.3
+  cloud_firestore: ^5.5.0
+  google_sign_in: ^6.2.2
+  cupertino_icons: ^1.0.8
+  flutter_secure_storage: ^7.0.1
+  flutter_cache_manager: ^3.3.0
+  shared_preferences: ^2.0.15
+  image_picker: ^0.8.7+3
+  firebase_storage: ^12.3.6
+  firebase_database: ^11.1.6
+  intl: ^0.18.0
+  location: ^5.0.0
+  salomon_bottom_bar: ^3.3.1
+  syncfusion_flutter_gauges: ^27.2.5
+  syncfusion_flutter_charts: ^27.2.5
+  wifi_scan: ^0.4.1+1
+  permission_handler: ^10.2.0
+  url_launcher: ^6.1.7
+  android_intent_plus: ^5.2.0
+  network_info_plus: ^6.1.1
+  googleapis: ^11.0.0
+  googleapis_auth: ^1.6.0
+  firebase_vertexai: ^1.0.4
+  mobile_scanner: ^6.0.2
+  responsive_framework: ^0.1.9
+  vector_math: ^2.1.0
+  geocoding: ^3.0.0
+  geolocator: ^13.0.2
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+  path_provider: ^2.0.14
+  rxdart: ^0.27.7
+  google_fonts: ^4.0.3
+
+
+
+http: ^0.15.0
+
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_launcher_icons: ^0.13.1
+  flutter_lints: ^4.0.0
+
+flutter_icons:
+  android: true
+  ios: false
+  image_path: "asset/logo/zero.png"
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - asset/logo/zero.png
+    - asset/logo/googlelogo.png
+    - asset/backgrounds/login_register/bg_layer_1.jpg
+    - asset/backgrounds/login_register/bg_layer_2.png
+    - asset/backgrounds/login_register/bg_layer_1_v2.jpg
+    - asset/backgrounds/login_register/bg_layer_2_v2.png
+    - asset/backgrounds/Profile/profile_bg_l1.jpg
+    - asset/backgrounds/Profile/profile_bg_l2.png
+    - asset/backgrounds/Profile/profile_bg_l2_v2.png
+    - asset/backgrounds/pair/pair_bg.jpg
+    - asset/logo/chat_logo.png
+    - asset/backgrounds/Profile/web_bg.png
+    - asset/backgrounds/Profile/red_bg.png
+
+

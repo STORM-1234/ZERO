@@ -1,0 +1,70 @@
+plugins {
+    id "com.android.application"
+    id "kotlin-android"
+
+    // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
+    id "dev.flutter.flutter-gradle-plugin"
+    id("com.google.gms.google-services") // Add Google services Gradle plugin
+}
+apply plugin: 'com.google.gms.google-services'
+
+android {
+    namespace = "com.zero.zerov7"
+
+    compileSdk = 34 // Update this based on your SDK
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = "17"
+    }
+
+    defaultConfig {
+        applicationId = "com.zero.zerov7"
+        minSdk = 23
+        targetSdk = 34
+        versionCode = 1
+        versionName = "1.0"
+        multiDexEnabled true
+    }
+
+    buildTypes {
+        release {
+            // Enable code shrinking, obfuscation, and resource shrinking
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            // Optionally enable shrinking for the debug build as well
+            minifyEnabled false
+            shrinkResources false
+        }
+    }
+}
+
+dependencies {
+    implementation 'androidx.multidex:multidex:2.0.1'
+    implementation 'androidx.appcompat:appcompat:1.7.0' // Add this line to include AppCompat
+
+    // Import the Firebase BoM (Bill of Materials)
+    implementation platform('com.google.firebase:firebase-bom:33.6.0')
+
+    // Add the dependencies for Firebase products you want to use
+    implementation 'com.google.firebase:firebase-analytics'
+    implementation 'com.google.firebase:firebase-auth' // Add Firebase Authentication
+    // Uncomment to include additional Firebase features, e.g.:
+    // implementation 'com.google.firebase:firebase-firestore'
+
+    // Other dependencies...
+}
+
+flutter {
+    source = "../.."
+}
+
+// Apply Google services plugin for Firebase integration
+apply plugin: 'com.google.gms.google-services'

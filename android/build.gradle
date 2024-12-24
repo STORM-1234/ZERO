@@ -1,0 +1,34 @@
+buildscript {
+    ext {
+        kotlin_version = '1.7.10' // Update the Kotlin version to be compatible
+    }
+    repositories {
+        google()  // Required for Firebase services
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:8.1.4' // Use the latest stable version
+        classpath 'com.google.gms:google-services:4.4.2' // Google services Gradle plugin for Firebase
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version" // Kotlin Gradle plugin
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
+rootProject.buildDir = "../build"
+subprojects {
+    project.buildDir = "${rootProject.buildDir}/${project.name}"
+}
+subprojects {
+    project.evaluationDependsOn(":app")
+}
+
+tasks.register("clean", Delete) {
+    delete rootProject.buildDir
+}
+
