@@ -25,22 +25,22 @@ class DefaultFirebaseOptions {
       case TargetPlatform.iOS:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for ios - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
+              'you can reconfigure this by running the FlutterFire CLI again.',
         );
       case TargetPlatform.macOS:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for macos - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
+              'you can reconfigure this by running the FlutterFire CLI again.',
         );
       case TargetPlatform.windows:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for windows - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
+              'you can reconfigure this by running the FlutterFire CLI again.',
         );
       case TargetPlatform.linux:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for linux - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
+              'you can reconfigure this by running the FlutterFire CLI again.',
         );
       default:
         throw UnsupportedError(
@@ -50,22 +50,22 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyCMzNLDBwVK-_R5lV8FMYF12WlBitU9fHU',
-    appId: '1:39932065706:web:d3b3ad5e4fe7c4cbfb5dd3',
-    messagingSenderId: '39932065706',
-    projectId: 'zero-98e8f',
-    authDomain: 'zero-98e8f.firebaseapp.com',
-    databaseURL: 'https://zero-98e8f-default-rtdb.asia-southeast1.firebasedatabase.app',
-    storageBucket: 'zero-98e8f.firebasestorage.app',
-    measurementId: 'G-2RB78CQQ5R',
+    apiKey: String.fromEnvironment('FIREBASE_WEB_API_KEY', defaultValue: ''),
+    appId: String.fromEnvironment('FIREBASE_WEB_APP_ID', defaultValue: ''),
+    messagingSenderId: String.fromEnvironment('FIREBASE_WEB_MESSAGING_SENDER_ID', defaultValue: ''),
+    projectId: String.fromEnvironment('FIREBASE_PROJECT_ID', defaultValue: ''),
+    authDomain: String.fromEnvironment('FIREBASE_WEB_AUTH_DOMAIN', defaultValue: ''),
+    databaseURL: String.fromEnvironment('FIREBASE_WEB_DATABASE_URL', defaultValue: ''),
+    storageBucket: String.fromEnvironment('FIREBASE_WEB_STORAGE_BUCKET', defaultValue: ''),
+    measurementId: String.fromEnvironment('FIREBASE_WEB_MEASUREMENT_ID', defaultValue: ''),
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyB-dbHKablKtIpz7Hk8pu38dQtcmNCHZvw',
-    appId: '1:39932065706:android:74d05a41e9b73de5fb5dd3',
-    messagingSenderId: '39932065706',
-    projectId: 'zero-98e8f',
-    databaseURL: 'https://zero-98e8f-default-rtdb.asia-southeast1.firebasedatabase.app',
-    storageBucket: 'zero-98e8f.firebasestorage.app',
+    apiKey: String.fromEnvironment('FIREBASE_ANDROID_API_KEY', defaultValue: ''),
+    appId: String.fromEnvironment('FIREBASE_ANDROID_APP_ID', defaultValue: ''),
+    messagingSenderId: String.fromEnvironment('FIREBASE_ANDROID_MESSAGING_SENDER_ID', defaultValue: ''),
+    projectId: String.fromEnvironment('FIREBASE_PROJECT_ID', defaultValue: ''),
+    databaseURL: String.fromEnvironment('FIREBASE_ANDROID_DATABASE_URL', defaultValue: ''),
+    storageBucket: String.fromEnvironment('FIREBASE_ANDROID_STORAGE_BUCKET', defaultValue: ''),
   );
 }

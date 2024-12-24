@@ -50,7 +50,7 @@ class _MainHomeScreenState extends State<MainHomeScreen> {
   Timer? _locationTimer;
 
   // Replace with your actual Google Geocoding API key
-  static const String _googleGeocodingApiKey = 'AIzaSyDA2lIiJxqEGbiO7A8LXs7JC-TDgZiuwLI';
+  static const String _googleGeocodingApiKey = 'Your Api Key';
 
   @override
   void initState() {

@@ -6,7 +6,7 @@ class AboutUsPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-\
+
 
     final String backgroundAsset = kIsWeb
         ? "asset/backgrounds/Profile/red_bg.png"         // Web
